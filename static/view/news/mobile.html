@@ -1,0 +1,22 @@
+﻿<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>good梦你 - iyume</title>
+<link rel="stylesheet" type="text/css" href="__STATIC__/css/article.mobile.css">
+<div class="mainer">
+	<div class="c">
+		{volist name='list' id='item'}
+			<div class='c_title_div'><a class='c_title' href='http://iyume.cn/a/{$item.acid}' target='_blank'>{$item.a}</a></div>
+		{/volist}
+	</div>
+	<div class="con_page">
+		{if $list->currentPage()>1}
+		<a class="one" href="/news/index/page/{$list->currentPage() - 1}">上一页</a>
+		&nbsp;
+		{/if}
+		{if $list->currentPage()<$count}
+		<a class="two" href="/news/index/page/{$list->currentPage() + 1}">下一页</a>
+		&nbsp;
+		{/if}
+		第<input style="width:25px;text-align:right;color:#66ccff;border:none;outline:none;font-size:16px" value="{$list->currentPage()}"/>/<a>{$count}</a>页
+	</div>
+</div>
+

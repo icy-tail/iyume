@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+ <meta charset="utf-8">
+ <title>Hello, visitor.</title>
+</head>
+<body style="height: 100%; margin: 0">
+ <div id="container" style="height: 100vh"></div>
+ <script type="text/javascript" src="__STATIC__/js/public/echarts.min.js"></script>
+ <script type="text/javascript" src="__STATIC__/js/public/china.js"></script>
+ <script type="text/javascript">
+    console.log("你来啦~我还以为你从来都不会来呢……");
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom);
+    option = null;
+    myChart.showLoading();
+    $.get("/api/access/getinfo").done(function(data){
+        myChart.hideLoading();
+        var res = [];
+        // $.parseJSON(data)
+        $.each(data, function(index, item){
+            var geoCoord = [item.x,item.y];
+            if (geoCoord) {
+                res.push({
+                    name: item.address,
+                    value: geoCoord.concat(item.ip)
+                });
+            }
+        });
+        console.log(res);
+        myChart.setOption({
+            backgroundColor: '#404a59',
+            title: {
+                text: '来访者',
+                subtext: 'iyume.cn',
+                left: 'center',
+                textStyle: {
+                    color: '#fff'
+                }
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter: function (params) {
+                    return params.name + '<br/>IP:' + params.value[2];
+                }
+            },
+            legend: {
+                orient: 'vertical',
+                y: 'bottom',
+                x:'right',
+                textStyle: {
+                    color: '#fff'
+                }
+            },
+            geo: {
+                map: 'china',
+                label: {
+                    emphasis: {
+                        show: false
+                    }
+                },
+                roam: true,
+                itemStyle: {
+                    normal: {
+                        areaColor: '#323c48',
+                        borderColor: '#111'
+                    },
+                    emphasis: {
+                        areaColor: '#2a333d'
+                    }
+                }
+            },
+            series : [
+            {
+                type: 'effectScatter',
+                coordinateSystem: 'geo',
+                data: res,
+                symbolSize: 10,
+                showEffectOn: 'render',
+                rippleEffect: {
+                    brushType: 'stroke'
+                },
+                hoverAnimation: true,
+                label: {
+                    normal: {
+                        formatter: '{b}',
+                        position: 'right',
+                        show: false
+                    },
+                    emphasis: {
+                        show: false
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#f4e925',
+                        shadowBlur: 10,
+                        shadowColor: '#333'
+                    }
+                },
+                zlevel: 1
+            }
+            ]
+        });
+    });
+</script>
+</body>
+</html>

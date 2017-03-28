@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name = "format-detection" content = "telephone=no" />
+<meta name="keywords" content="无限大梦想,大世界,八音盒,幻想乡,尾巴,知白,废柴の尾巴,冰凉的尾巴,icytail" />
+<meta name="description" content="小知白的幻想乡">
+<link rel="stylesheet" href="/static/css/style.css">
+<script src="__STATIC__/js/public/jquery.1.8.3.min.js"></script>
+<script src="__STATIC__/js/public/tmStickUp.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#stuck_container').tmStickUp({});
+  });
+</script>
+</head>
+<body>
+<!--==============================
+              header
+=================================-->
+<header>
+  <div class="header_top">
+    <div class="container">
+      <div class="row">
+        <div class="grid_12">
+          <h1><a>愿你与围绕着你的世界<br/>今后也一直幸福下去</a></h1>
+          奈须 きのこ
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="stuck_container">
+  <!--==============================
+              Stuck menu
+  =================================-->
+    <div class="container">
+      <div class="row">
+        <div class="grid_12 ">
+          <h1 class="logo">
+            <a href="/index.php">
+              アイシテル
+            </a>
+          </h1>
+          <div class="navigation ">
+            <nav>
+              <ul class="sf-menu">
+                {volist name='navlist' id='nav'}
+                  <li><a href="{$nav->url}" class="{$nav->class}" target="_blank">{$nav->navname}</a></li>
+                {/volist}
+             </ul>
+            </nav>
+            <div class="clear"></div>
+          </div>
+         <div class="clear"></div>
+        </div>
+     </div> 
+    </div> 
+  </section>
+</header>
+<!--=====================
+          Content
+======================-->
+<section id="content">
+{__CONTENT__}
+</section>
+<!--==============================
+              footer
+=================================-->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="grid_12"> 
+        <div class="sub-copy">向经典致敬 侵删</div>
+        <div class="sub-copy"><img src="/static/icons/icy_tail.jpg"></div>
+        <div class="sub-copy">Copyright © 2015 互联网ICP备案：湘ICP备15019325号</div>
+        <div class="sub-copy">联系邮箱：<a href="mailto:icytail@iyume.cn">icytail@iyume.cn</a></div>
+      </div>
+    </div>
+  </div>  
+</footer>
+</body>
+</html>

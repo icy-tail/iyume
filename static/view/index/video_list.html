@@ -1,0 +1,23 @@
+<link href="__CSS__/video.css" rel="stylesheet">
+<title>video - iyume</title>
+<div class="iyume-video-list">
+	<div class="video-list">
+		{volist name='vlist' id='video'}
+		<div class='video-item'>
+			<a class='video-link' href='/video/{$video.id}' target='_blank'>{$video.title}</a>
+		</div>
+		{/volist}
+	</div>
+	<div class="con_page">
+		{if $vlist->currentPage()>1}
+		<a class="previous" href="/videos/{$vlist->currentPage() - 1}#stuck_container">上一页</a>
+		&nbsp;
+		{/if}
+		{if $vlist->currentPage()<$count}
+		<a class="next" href="/videos/{$vlist->currentPage() + 1}#stuck_container">下一页</a>
+		&nbsp;
+		{/if}
+		第{$vlist->currentPage()}/{$count}页
+	</div>
+</div>
+

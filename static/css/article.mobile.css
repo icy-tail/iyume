@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+*{
+	padding: 0;
+	margin: 0;
+	font-family: microsoft yahei;
+	overflow-x: hidden;
+}
+.mainer{
+	width: 100%;
+	display:block; 
+}
+.c_title_div{
+	padding: 35px 0;
+}
+.c_title{
+	text-decoration: none;
+	border-left: 3px solid #66ccff; 
+	padding-left: 10px;
+}
+.c_title:link,.c_title:visited{
+	color: black;
+}
+.con_page{
+	padding: 20px 0;
+	color: #66CCFF;
+	font-size: 14px
+}
+.con_page a{
+	text-decoration: none;
+}
+.con_page a:link,.con_page a:visited{
+	color: #fff;
+}
+.one,.two{
+	width: 100px;
+	height: 50px;
+	background-color: #66ccff;
+	padding: 10px 10%;
+}

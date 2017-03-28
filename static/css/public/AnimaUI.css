@@ -1,0 +1,192 @@
+@CHARSET "UTF-8";
+*{
+	padding: 0;
+	margin: 0;
+}
+@font-face { 
+	font-family: saoui;
+	src: url("../../fonts/SAOUI.ttf"); 
+} 
+@font-face { 
+	font-family: fzzy;
+	src: url("../../fonts/fzzy.ttf"); 
+} 
+._ok{
+	height: 30px;
+	width: 30px;
+	border: none;
+	border-radius: 15px;
+	outline: none;
+	cursor: pointer;
+	background-image: url("/static/icons/ui/ok_normal.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: block;
+}
+._ok:HOVER {
+	background-image: url("/static/icons/ui/ok_hover.png");
+}
+._ok:ACTIVE {
+	background-image: url("/static/icons/ui/ok_disable.png");
+}
+._cancel{
+	height: 30px;
+	width: 30px;
+	border: none;
+	border-radius: 15px;
+	outline: none;
+	cursor: pointer;
+	background-image: url("/static/icons/ui/cancel_normal.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: block;
+}
+._cancel:HOVER {
+	background-image: url("/static/icons/ui/cancel_hover.png");
+}
+._cancel:ACTIVE {
+	background-image: url("/static/icons/ui/cancel_disable.png");
+}
+._default{
+	height: 30px;
+	width: 30px;
+	border: none;
+	border-radius: 15px;
+	outline: none;
+	cursor: pointer;
+	background-image: url("/static/icons/ui/default_normal.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: block;
+}
+._default:HOVER {
+	background-image: url("/static/icons/ui/default_hover.png");
+}
+._default:ACTIVE {
+	background-image: url("/static/icons/ui/default_press.png");
+}
+._infochild_bottom_ok{
+	height: 40px;
+	width: 40px;
+	border: none;
+	border-radius: 23px;
+	outline: none;
+	cursor: pointer;
+	background-image: url("/static/icons/ui/ok_normal.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin: 0 45px;
+}
+._infochild_bottom_ok:HOVER {
+	background-image: url("/static/icons/ui/ok_hover.png");
+}
+._infochild_bottom_ok:ACTIVE {
+	background-image: url("/static/icons/ui/ok_disable.png");
+}
+._infochild_bottom_cancel{
+	height: 40px;
+	width: 40px;
+	border: none;
+	border-radius: 23px;
+	outline: none;
+	cursor: pointer;
+	background-image: url("/static/icons/ui/cancel_normal.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin: 0 45px;
+}
+._infochild_bottom_cancel:HOVER {
+	background-image: url("/static/icons/ui/cancel_hover.png");
+}
+._infochild_bottom_cancel:ACTIVE {
+	background-image: url("/static/icons/ui/cancel_disable.png");
+}
+._mask{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+._infownd{
+	width: 0;
+	margin: auto;
+	margin-top: 141px;
+	background-color: #FFF;
+	border: none;
+	border-radius: 2px;
+	box-shadow: 0 0 11px #8C8B8B;
+	display: block;
+}
+._infochild_top{
+	width: 100%;
+	height: 44px;
+	border-radius: 2px 2px 0 0;
+	text-align: center;
+	padding-top: 10px;
+	font-family: saoui;
+}
+._title_warning{
+	background-color: #FFF144;
+}
+._title_error{
+	background-color: #FF5151;
+}
+._title_info{
+	background-color: #66CCFF;
+}
+._infochild_middle{
+	height: 0;
+	width: 100%;
+}
+._infochild_bottom{
+	width: 100%;
+	height: 54px;
+	padding-top: 10px;
+	background-color: #E6E4E4;
+	border-radius: 0 0 2px 2px;
+}
+._infochild_middle_context{
+	text-align: center;
+	padding: 20px;
+	color: #565656;
+	font-family: fzzy;
+	font-size: 16px;
+	font-weight: bold;
+}
+._infochild_bottom_div{
+	text-align: center;
+	margin: auto;
+}
+._immortal{
+	position: fixed;
+	left: 0;
+	top: 126px;
+	height: 0; 
+	width: 300px;
+	background-image: url("/static/icons/ui/immortal.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	z-index: 999999;
+}
+._menu{
+	position: fixed;
+	z-index: 999999999999999;
+}
+._menu_item{
+	position: absolute;
+	width: 200px;
+	background-color: #fff;
+	cursor: pointer;
+	padding: 20px 5px;
+}
+._menu_item:hover{
+	border-left: 3px solid #66ccff; 
+}

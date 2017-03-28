@@ -1,0 +1,13 @@
+﻿<meta charset="utf-8">
+<title>{$title}</title>
+<div style='height:50px;'></div>
+<div style='width:900px;margin:auto;'>{$concent}</div>
+<div style='height:50px;'></div>
+<div style='width:900px;margin:auto;text-align:right;line-height:50px;'>
+	{if $page > 1}
+	<a href="/novel/{$name}/{$page - 1}">上一页</a>
+	&nbsp;
+	{/if}
+	<a href="/novel/{$name}/{$page + 1}">下一页</a>
+</div>
+

@@ -1,0 +1,26 @@
+﻿<title>good梦你 - iyume</title>
+<link rel="stylesheet" type="text/css" href="/static/css/article.css">
+<script type="text/javascript" src="/static/js/public/AnimaUI.js"></script>
+<script type="text/javascript" src="/static/js/article.js"></script>
+<div class="video-layer"></div>
+<embed src="/static/video/section_1_bg.swf" quality="high" type="application/x-shockwave-flash" wmode="transparent" id="header-flash">
+	<div class="mainer">
+		<div class="c">
+			{volist name='list' id='item'}
+			<div class='c_title_div'>
+				<a class='c_title' href='/a/{$item.acid}' target='_blank'>{$item.a}</a>
+			</div>
+			{/volist}
+		</div>
+		<div class="con_page">
+			{if $list->currentPage()>1}
+			<a class="one" href="/news/{$list->currentPage() - 1}#stuck_container">上一页</a>
+			&nbsp;
+			{/if}
+			{if $list->currentPage()<$count}
+			<a class="two" href="/news/{$list->currentPage() + 1}#stuck_container">下一页</a>
+			&nbsp;
+			{/if}&nbsp;第{$list->currentPage()}/{$count}页
+		</div>
+	</div>
+
