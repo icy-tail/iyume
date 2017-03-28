@@ -13,13 +13,13 @@ return [
     // 数据库类型
     'type'           => 'mysql',
     // 服务器地址
-    'hostname'       => 'qdm203823330.my3w.com',
+    'hostname'       => 'iqdm203823330.my3w.com',
     // 数据库名
-    'database'       => 'qdm203823330_db',
+    'database'       => 'iqdm203823330_db',
     // 用户名
-    'username'       => 'qdm203823330',
+    'username'       => 'iqdm203823330',
     // 密码
-    'password'       => '1104112452mysql',
+    'password'       => 'i1104112452mysql',
     // 端口
     'hostport'       => '',
     // 连接dsn
